@@ -7,79 +7,57 @@ use Illuminate\Http\Request;
 
 class LivroController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
+
+
+
+    public function index(){
         //TODO
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
+
+
+
+    public function create(){
         //TODO
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
+
+
+
+    public function store(Request $request){
         //TODO
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \laravelVueProjetoLivros\livro  $livro
-     * @return \Illuminate\Http\Response
-     */
-    public function show(livro $livro)
-    {
+
+
+
+    public function show(Livro $livro){
         //TODO
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \laravelVueProjetoLivros\livro  $livro
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(livro $livro)
-    {
+
+
+
+    public function edit(Livro $livro){
         //TODO
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \laravelVueProjetoLivros\livro  $livro
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, livro $livro)
-    {
+
+
+
+
+    public function update(Request $request, Livro $livro){
         //TODO
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \laravelVueProjetoLivros\livro  $livro
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(livro $livro)
-    {
+
+
+
+    public function destroy(Livro $livro){
         //TODO
     }
+
+
+
+    
 }
