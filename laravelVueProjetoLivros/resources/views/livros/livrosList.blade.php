@@ -3,12 +3,5 @@
 
 
 @section('content')
-
-
-
-        <!-- TODO: aqui vai ter o componente do Vue JS que exibe a lista de livros -->
-        
-
-
-
+        <vue-livros-list livros={{$livros}}></vue-livros-list>
 @stop

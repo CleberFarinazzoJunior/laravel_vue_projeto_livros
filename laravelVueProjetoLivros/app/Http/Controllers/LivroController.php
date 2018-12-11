@@ -11,7 +11,8 @@ class LivroController extends Controller
      * Exibe a lista de itens salvos no banco
      */
     public function index(){
-        //TODO
+        $livros = Livro::all();  
+        return view('/livros/livrosList')->with('livros', $livros); 
     }
 
     /**
@@ -19,7 +20,7 @@ class LivroController extends Controller
      * para cadastro de um novo item
      */
     public function create(){
-        //TODO 
+        return view('/livros/livrosForm');
     }
 
     /**
