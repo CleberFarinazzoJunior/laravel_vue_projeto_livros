@@ -9,7 +9,7 @@ Essa clase "navbar-expand-sm" está dizendo que é desejado expandir a navbar,
 ou seja, a navbar vai ficar na horizontal. 
 O "sm" indica a exceção, que seriam as telas pequenas ("sm" é de small) 
 -->
-<nav class="navbar navbar-expand-sm">
+<nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark ">
 
     <!-- Essa classe "navbar-brand" pode ser usada para um logotipo ou título na navbar -->
     <!-- TODO: colocar um link para a home page -->
@@ -29,7 +29,7 @@ O "sm" indica a exceção, que seriam as telas pequenas ("sm" é de small)
         <!-- Canto esquerdo da barra de navegação -->
         <ul class="navbar-nav mr-auto" >
             <li class="nav-item">                
-                <a class="nav-link"href="{{route('livros.index')}}">Livros</a>
+                <a class="nav-link" href="{{route('livros.index')}}">Livros</a>
             </li>
 
             <li class="nav-item">                 

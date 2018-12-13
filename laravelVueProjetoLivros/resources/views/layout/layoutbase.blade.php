@@ -10,6 +10,9 @@
         <!-- Estilos CSS padrão do Laravel, que contém também classes do bootstrap -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+        <!-- Estilos CSS criados em outro arquivo -->
+        <link href="/css/estilo.css" rel="stylesheet">
+
         <!-- Responsividade -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -23,26 +26,29 @@
 
     </head>
     <body>
-        <div id="app" class="container">
-        
-            <header class="row">
-                    @include('partials.header')
-            </header>
+        <div class="container-bg">
+            <div id="app" class="container">
+            
+                <header class="py-5">
+                        @include('partials.header')
+                </header>
 
-            <main class="py-4">
+                <!-- nessa classe "py", o "p" representa padding e o "y" representa eixo y -->
+                <!-- O numero representa o tamanho do padding -->
+                <main class="py-5">
+                    
+                    @yield('content')
 
-                @yield('content')
-
-            </main>
-
-
-            <footer class="row">
-                @include('partials.footer')
-            </footer>
+                </main>
 
 
-        </div>
+                <footer class="row fixed-bottom justify-content-center bg-dark">
+                    @include('partials.footer')
+                </footer>
 
+
+            </div>
+        <div class="container-bg">
         <!-- imports de scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
 
