@@ -47645,17 +47645,53 @@ var render = function() {
     _c("br"),
     _c("br"),
     _vm._v(" "),
-    _c("table", { staticClass: "table" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c(
-        "tbody",
-        _vm._l(_vm.books, function(livro) {
-          return _c("tr", { key: livro.id }, [
-            _c("td", [_vm._v(_vm._s(livro.titulo))])
-          ])
-        })
-      )
+    _c("div", { staticClass: "table-responsive" }, [
+      _c("table", { staticClass: "table" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "tbody",
+          _vm._l(_vm.books, function(livro) {
+            return _c("tr", { key: livro.id }, [
+              _c("td", { staticClass: "align-middle" }, [
+                _vm._v(_vm._s(livro.titulo))
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "align-middle" }, [
+                _vm._v(_vm._s(livro.autor))
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "align-middle" }, [
+                _vm._v(_vm._s(livro.paginas))
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "align-middle" }, [
+                _vm._v(_vm._s(livro.anoLancamento))
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "align-middle" }, [
+                _vm._v(_vm._s(livro.editora))
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "align-middle" }, [
+                _vm._v(_vm._s(livro.edicao))
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "align-middle" }, [
+                _vm._v(_vm._s(livro.genero))
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "align-middle" }, [
+                _vm._v(_vm._s(livro.descricao))
+              ]),
+              _vm._v(" "),
+              _vm._m(1, true),
+              _vm._v(" "),
+              _vm._m(2, true)
+            ])
+          })
+        )
+      ])
     ])
   ])
 }
@@ -47664,7 +47700,51 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("thead", [_c("th", [_vm._v("Título")])])
+    return _c("thead", { staticClass: "thead-light" }, [
+      _c("th", { staticClass: "font-weight-bold " }, [_vm._v("TÍTULO")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "font-weight-bold" }, [_vm._v("AUTOR")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "font-weight-bold" }, [_vm._v("PAGINAS")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "font-weight-bold" }, [_vm._v("LANÇAMENTO")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "font-weight-bold" }, [_vm._v("EDITORA")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "font-weight-bold" }, [_vm._v("EDIÇÃO")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "font-weight-bold" }, [_vm._v("GENERO")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "font-weight-bold" }, [_vm._v("DESCRIÇÃO")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "font-weight-light" }, [_vm._v(" EDITAR ")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "font-weight-light" }, [_vm._v(" EXCLUIR ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("a", { attrs: { href: "#" } }, [
+        _c("button", { staticClass: "btn btn-outline-secondary btn-sm" }, [
+          _vm._v("EDITAR")
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("a", { attrs: { href: "#" } }, [
+        _c("button", { staticClass: "btn btn-outline-secondary btn-sm" }, [
+          _vm._v("EXCLUIR")
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true

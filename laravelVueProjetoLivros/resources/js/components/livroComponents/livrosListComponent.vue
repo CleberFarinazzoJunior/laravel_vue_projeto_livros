@@ -28,27 +28,58 @@
 
 <template>
     <div>
-        <!-- por enquanto, feito um mínimo apenas para testar -->
-        <!-- TODO: terminar a página -->
+
+        <!-- TODO: Fazer algum tratamento para quando não houver nenhum livro cadastrado a ser exibido -->
+
         <h1>LISTA DE LIVROS</h1>
         <br><br>
 
-        <table class="table">
+        <div class="table-responsive">   
+            <table class="table">
 
-            <thead>                
-                <th>Título</th>
-                <!-- TODO: falta colocar os itens corretos. Isso aqui é só teste -->
-            </thead>
+                <thead class="thead-light">                
+                    <th class="font-weight-bold ">TÍTULO</th>
+                    <th class="font-weight-bold">AUTOR</th>
+                    <th class="font-weight-bold">PAGINAS</th>
+                    <th class="font-weight-bold">LANÇAMENTO</th>
+                    <th class="font-weight-bold">EDITORA</th>
+                    <th class="font-weight-bold">EDIÇÃO</th>
+                    <th class="font-weight-bold">GENERO</th>
+                    <th class="font-weight-bold">DESCRIÇÃO</th>
+                    <th class="font-weight-light"> EDITAR </th>
+                    <th class="font-weight-light"> EXCLUIR </th>
+                </thead>
 
-            <tbody> 
-                <tr v-for="livro in books" :key="livro.id">                    
-                    <td>{{livro.titulo}}</td>
-                    <!-- TODO: falta colocar os itens corretos. Isso aqui é só teste -->
-                    <!-- TODO: falta incluir também os botões para editar e excluir -->
-                </tr>    
-            </tbody>
+                <tbody> 
+                    <tr v-for="livro in books" :key="livro.id">                    
+                        <td class="align-middle">{{livro.titulo}}</td>
+                        <td class="align-middle">{{livro.autor}}</td>
+                        <td class="align-middle">{{livro.paginas}}</td>
+                        <td class="align-middle">{{livro.anoLancamento}}</td>
+                        <td class="align-middle">{{livro.editora}}</td>
+                        <td class="align-middle">{{livro.edicao}}</td>
+                        <td class="align-middle">{{livro.genero}}</td>
+                        <td class="align-middle">{{livro.descricao}}</td>
 
 
-        </table>    
+                        <!--botão para editar livro -->
+                        <td>
+                            <a href="#">
+                                <button class="btn btn-outline-secondary btn-sm">EDITAR</button>
+                            </a>
+                        </td>
+
+                        <!--botão para excluir livro -->
+                        <td>
+                            <a href="#">
+                                <button class="btn btn-outline-secondary btn-sm">EXCLUIR</button>
+                            </a>
+                        </td>
+
+                    </tr>    
+                </tbody>
+            </table>    
+
+        </div>
     </div>
 </template>
